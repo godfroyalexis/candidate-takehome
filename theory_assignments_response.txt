@@ -1,0 +1,26 @@
+Question 1:
+
+For the project to be ready to go into production, you will already have to review a few technical points :
+- Instantiate environment variables for production.
+- Prepare the database for production.
+- Review a more segmented tree structure (with routes, middlewares, controllers, authentication etc...).
+- It is also necessary to plan more unit and functional tests, with libraries
+- It will also be necessary to make a pull request for other developers to check the code.
+
+Once these points have been dealt with, you will have to find a domain name, buy it and host the project on a cloud service, with storage and set up a cloud architecture.
+
+These points can therefore be managed in 4 parts:
+- Design + Development
+- Technical testing and technical surveying.
+- Functional testing.
+- Cloud deployment.
+
+Question 2:
+
+To automate data retrieval via the populate API, you will need to set up an automation cron that will run once a day to retrieve the latest files.
+It is also possible to develop a webhook, which will therefore allow the real-time recovery of files. (I prefer this solution).
+
+Question 3:
+
+Indeed, the database schema is not optimal, there is only one "game" table with lots of information not really related to the game itself. That's why, my idea would be to create several tables, and make relationships, for example for publishers, categories, platforms (to manage versions), which are often the same for games, and I'll make links through ids.
+Concerning the deposited file, I do not understand why the applications are linked by 3. I will therefore make this file less complicated by making a single table.
